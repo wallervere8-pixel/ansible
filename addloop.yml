@@ -1,0 +1,16 @@
+---
+- Name: addloop
+  hosts:
+    - devop2
+    - many
+  gather_facts: no
+  become: yes
+
+  tasks: 
+    - name: addloopback
+      ios_command: 
+        commands:
+          - conf t
+          - int lo10
+          - ip add 10.10.10.10 255.255.255.255
+          - end
