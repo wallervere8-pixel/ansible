@@ -1,5 +1,5 @@
 ---
-- Name: addloop
+- name: addloop
   hosts:
     - devop2
     - many
@@ -13,4 +13,5 @@
           - conf t
           - int lo10
           - ip add 10.10.10.10 255.255.255.255
+
           - end
